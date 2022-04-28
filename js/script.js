@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
   // Scroller
-
+  
   const scroller = document.getElementById('scroller');
 
   if (scroller) {
@@ -32,6 +32,7 @@ document.addEventListener("DOMContentLoaded", function() {
     document.addEventListener("scroll", () => {
       if (scrollContainer().scrollTop > 600) {
         scroller.classList.remove("hidden");
+      } else if (scrollContainer().scrollTop > 200) {
         header.classList.add('sticky');
       } else {
         scroller.classList.add("hidden");
@@ -48,6 +49,39 @@ document.addEventListener("DOMContentLoaded", function() {
       document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
     }
   }
+
+  // Faq Accordion
+
+  const faqHeaders = document.querySelectorAll(".faq_header"),
+        faqContents = document.querySelectorAll(".faq_content");
+
+  if (faqHeaders) {
+    faqHeaders.forEach((header) => {
+      header.addEventListener("click", () => {
+        let content = header.nextElementSibling;
+        const openFAQ = document.querySelector(".faq_header.open");
+  
+        if (openFAQ && openFAQ !== header) {
+          openFAQ.classList.toggle("open");
+        }
+  
+        header.classList.toggle("open");
+  
+        if (content.style.maxHeight) {
+          faqContents.forEach((el) => {
+            el.style.maxHeight = null;
+          });
+        } else {
+          faqContents.forEach((el) => {
+            el.style.maxHeight = null;
+          });
+          content.style.maxHeight = content.scrollHeight + "px";
+        }
+      });
+    });
+  }
+  
+
 
   // Contact Form
 
@@ -74,7 +108,7 @@ document.addEventListener("DOMContentLoaded", function() {
       setTimeout(function() {
         el.style.cssText = 'height:auto; padding:0';
         el.style.cssText = 'height:' + el.scrollHeight + 'px';
-      }, 1);
+      },1);
     }
 
     // Submit form
@@ -110,57 +144,73 @@ document.addEventListener("DOMContentLoaded", function() {
     // Form validation
     function formValidate(form) {
       let error = 0;
-      let formReq = document.querySelectorAll('.req');
+      let formItems = document.querySelectorAll('.form_input');
       
       // Validation messages
       const errorMessages = {
         email: 'Please enter a valid email address',
         require: 'This field is required',
         phone: 'Please enter a valid number',
+        digits: 'It should contain 10 digits'
       }
-      
+
       const errors = document.querySelectorAll('.error_message');
       errors.forEach(error => {
         error.remove()
       })
       
-      for (let i = 0; i < formReq.length; i++) {
-        const input = formReq[i];
-        // Create error message
+      // Set error status 
+      for (let i = 0; i < formItems.length; i++) {
+        const input = formItems[i];
+        /* Create error message*/
         const alert = document.createElement('p');
         alert.classList.add('error_message');
         formRemoveError(input);
         
-        if (input.value === '') {
-          formAddError(input);
-          alert.textContent = errorMessages.require;
-          input.after(alert);
-          error++;
-
-        } else if (input.classList.contains('email')) {
+        
+        /* Required fields*/
+        if (input.classList.contains('req')) {
+          if (input.value === '') {
+            formAddError(input);
+            alert.textContent = errorMessages.require;
+            input.after(alert);
+            error++;
+          }
+        } 
+        /* Phone */
+        else if (input.classList.contains('phone') && input.value) {
+          if (phoneTest(input)) {
+            formAddError(input);
+            alert.textContent = errorMessages.phone;
+            input.after(alert);
+            error++;
+          } else if (input.value.length < 10) {
+            formAddError(input);
+            alert.textContent = errorMessages.digits;
+            input.after(alert);
+            error++;
+          }
+        }
+        /* Email */
+        else if (input.classList.contains('email,req')) {
           if (emailTest(input)) {
             formAddError(input);
             alert.textContent = errorMessages.email;
             input.after(alert);
             error++;
           } 
-        } else if (input.classList.contains('phone')) {
-          if (phoneTest(input)) {
-            formAddError(input);
-            alert.textContent = errorMessages.phone;
-            input.after(alert);
-            error++;
-          } 
-        }
+        } 
       }
-      return error
+      return error;
     }
 
+    // Add Error 
     function formAddError(input) {
       input.parentElement.classList.add('error');
       input.classList.add('error');
     }
 
+    // Remove Error 
     function formRemoveError(input) {
       input.parentElement.classList.remove('error');
       input.classList.remove('error');
@@ -175,7 +225,6 @@ document.addEventListener("DOMContentLoaded", function() {
     function phoneTest(input) {
       return !/^[+]*[(]{0,1}[0-9]{1,3}[)]{0,1}[-\s\./0-9]*$/g.test(input.value);
     }
-
   }
 
 })

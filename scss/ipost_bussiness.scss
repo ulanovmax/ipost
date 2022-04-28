@@ -1,6 +1,10 @@
 
 // Main Offer
 
+.main_offer {
+  background: $banner_col;
+}
+
 .offer_content {
   display: flex;
   flex-direction: column;
