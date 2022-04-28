@@ -1,0 +1,110 @@
+
+// Contact banner
+
+.contact_banner {
+  padding: rem(90) 0;
+}
+
+.contact_heading {
+  color: #fff;
+  text-align: center;
+  max-width: rem(442);
+  margin: 0 auto;
+  h1 {
+    margin-bottom: rem(8);
+  }
+}
+
+// Form section
+
+.form_section {
+  padding: rem(120) 0;
+}
+
+.contact_form {
+  max-width: rem(370);
+  margin: 0 auto;
+  &.loading {
+    .form_btn {
+      position: relative;
+      &::before {
+        content: '';
+        position: absolute;
+        width: rem(56);
+        height: rem(56);
+        top: 0;
+        background: url('../img/spinner_form.svg') no-repeat center / contain;
+      }
+      span {
+        opacity: 0;
+      }
+    }
+  }
+}
+
+.form_body {
+  display: grid;
+  gap: rem(30);
+  margin-bottom: rem(40);
+  * {
+    outline: none;
+    font: inherit;
+  }
+}
+
+.form_item {
+  position: relative;
+  label {
+    font-size: rem(12);
+    color: #888;
+    position: absolute;
+    left: 0;
+    top: rem(6);
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity $trans ease, visibility $trans ease, top $trans ease;
+  }
+  .error_message {
+    color: $btn_col;
+    font-size: rem(12);
+    margin-top: rem(4);
+  }
+}
+
+.form_input {
+  padding-bottom: rem(4) !important;
+  line-height: rem(26);
+  width: 100%;
+  border: 0;
+  @include transition(border);
+  border-bottom: rem(1) solid rgba(51, 51, 51, 0.3);
+  &::placeholder {
+    color: $text_col;
+    font-size: rem(16);
+    font-weight: 400;
+  }
+  &.focus + label {
+    opacity: 1;
+    visibility: visible;
+    top: rem(-12);
+  }
+  &.error {
+    border-bottom: rem(1) solid #E83434;
+  }
+}
+
+
+.form_btn {
+  width: 100%;
+  cursor: pointer;
+  span {
+    color: #fff;
+  }
+}
+
+.form_textarea {
+  resize: vertical;
+  overflow: hidden;
+  height: rem(30);
+}
+

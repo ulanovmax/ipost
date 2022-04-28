@@ -1,0 +1,218 @@
+
+// Services section
+
+.ipost_services {
+  padding: rem(72) 0;
+}
+
+.banner {
+  background: $banner_col;
+}
+
+.services_wrap {
+  display: flex;
+  flex-direction: column;
+  gap: rem(40);
+}
+
+.service_item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.price_name {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: rem(24);
+  .logo {
+    width: rem(94);
+    height: rem(32);
+    position: relative;
+  }
+  span {
+    font-size: rem(32);
+    color: #fff;
+    font-weight: 600;
+    margin-left: rem(4);
+  }
+}
+
+// Pricing Section
+
+.service {
+  &_me {
+    padding-top: rem(72);
+  }
+  &_business {
+    padding: rem(114) 0 rem(120);
+  }
+}
+
+.section_caption {
+  margin-bottom: rem(48);
+}
+
+.pricing_title {
+  margin-bottom: rem(42);
+}
+
+.pricing_list {
+  margin-bottom: rem(48);
+}
+
+.pricing_item {
+  padding: rem(24) rem(16);
+    &:nth-child(odd) {
+      background: $bg_light;
+    }
+    &::before {
+      @extend %flex_center;
+      width: rem(42);
+      height: rem(42);
+      border-radius: 50%;
+      color: #fff;
+      font-size: rem(18);
+      font-weight: 700;
+      margin-bottom: rem(24);
+    }
+    &.c5::before {
+      content: 'C5';
+      background: #37A348;
+    }
+    &.c4::before {
+      content: 'C4';
+      background: #2284BB;
+    }
+}
+
+.price_content {
+  width: 100%;
+}
+
+.price_wrap {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  margin-bottom: rem(8);
+}
+
+.service_name {
+  @media screen and (max-width: rem(360)) {
+    max-width: rem(210);
+  }
+  max-width: rem(408); 
+}
+
+.option_name {
+  @media screen and (max-width: rem(360)) {
+    max-width: rem(210);
+  }
+  max-width: 100%;
+}
+
+
+.price_amount {
+  font-weight: 700;
+  font-size: rem(18);
+}
+
+.option_item {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  &:not(:last-child) {
+    margin-bottom: rem(8);
+  }
+  span {
+    font-weight: 400;
+  }
+}
+
+.pricing_offer {
+  text-align: center;
+  padding: rem(24) 0;
+  background: $bg_light;
+    h3 {
+      max-width: rem(500);
+      margin: 0 auto;
+      br {
+        display: none;
+      }
+    }
+}
+
+// Responsive
+
+//------------- 768 --------------- //
+@media screen and (min-width: 768px) {
+
+  // Ipost Buttons
+
+  .ipost_services {
+    padding: rem(90) 0;
+  }
+
+  .services_wrap {
+    flex-direction: row;
+    justify-content: center;
+    gap: rem(124);
+  }
+  
+
+  // Pricing
+
+  .service_me {
+    padding-top: rem(82);
+  }
+
+  .pricing_item {
+    padding: rem(24);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+      &::before {
+        flex: 0 0 auto;
+        margin: 0 rem(24) 0 0;
+      }
+  }
+
+  .pricing_offer {
+    h3 {
+      max-width: 100%;
+      br {
+        display: inline;
+      }
+    }
+  }
+}
+
+//------------- 1280 --------------- //
+@media screen and (min-width: 1280px) {
+
+  .services_wrap {
+    gap: rem(176);
+  }
+
+  // Pricing
+
+  .service_me {
+    padding-top: rem(126);
+  }
+
+  .service_name {
+    max-width: 100%;
+  }
+
+  .pricing_offer {
+    h3 {
+      br {
+        display: inline;
+      }
+    }
+  }
+
+  .pricing_desc {
+    max-width: rem(970);
+  }
+}

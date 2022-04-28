@@ -1,0 +1,655 @@
+// Header
+
+.header {
+  background: $bg_dark;   
+  width: 100%;
+  top: rem(-1);
+  left: 0;
+  z-index: 999;
+  transition: height $trans ease, position $trans ease;
+  .logo {
+    width: rem(82);
+    height: rem(28);
+  }
+  &.sticky{
+    position: sticky;
+    animation: slide_down 0.7s;
+    opacity: 1; 
+  }
+}
+
+@keyframes slide_down {
+  0% {
+    top: -100%;;
+  } 
+  100% {
+    top: 0;
+  } 
+}
+
+.header_wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: rem(18) 0;
+}
+
+
+.menu_list {
+  position: fixed;
+  left: -100%;
+  top: 0;
+  background: $bg_dark;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: space-between;
+  gap: rem(40);
+  margin-top: rem(64);
+  padding: 0 rem(16) rem(38) rem(16);
+  transition: left $trans ease, visibility $trans ease;
+  @media screen and (min-width: rem(640)) {
+    height: rem(390);
+  }
+  @media screen and (min-width: rem(768)) {
+    padding: 0 rem(30) rem(38) rem(30);
+  }
+  @media screen and (min-width: rem(1024)) {
+    position: static;
+    height: auto;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+// Hero screen
+
+.hero_screen {
+  padding: rem(110) 0 rem(84);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url('../img/banner_mobile.jpg') no-repeat 60% 50% / cover;
+  @media screen and (min-width: 1024px) {
+    background: url('../img/banner.jpg') no-repeat 60% 50% / cover;
+  }
+}
+
+.offer {
+  text-align: center;
+  max-width: rem(396);
+  .logo {
+    width: rem(100);
+    height: rem(34);
+    margin: 0 auto rem(24) auto;
+  }
+  h1 {
+    color: #fff;
+  }
+}
+
+// Mails section
+
+.mails {
+  padding-top: rem(78);
+}
+
+.mail_item {
+  margin: 0 auto;
+  &:first-child {
+    margin-bottom: rem(44);
+  }
+}
+
+.section_title {
+  margin-bottom: rem(16);
+  span {
+    color: #888;
+    margin-bottom: rem(4);
+  }
+}
+
+.mail_card {
+  display: grid;
+  padding: rem(32);
+  border-radius: rem(4);
+  filter: drop-shadow(8px 8px 8px rgba(0, 0, 0, 0.07));
+  &.grey {
+    background: url('../img/bg_mail_grey.jpg') no-repeat center / cover;
+  }
+  &.gold {
+    background: url('../img/bg_mail_gold.jpg') no-repeat center / cover;
+  }
+  .logo {
+    position: relative;
+    margin-bottom: rem(46);
+  }
+}
+
+.mark_img {
+  margin-bottom: rem(24);
+}
+
+.mark_imgs {
+  display: flex;
+  align-items: center;
+  gap: rem(8);
+  img {
+    object-fit: contain;
+    max-width: 20%;
+    &:last-child {
+      max-width: 13%;
+    }
+  }
+}
+
+.card_title {
+  margin-bottom: rem(8);
+}
+
+.card_desc {
+  margin-bottom: rem(24);
+}
+
+.details_wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: rem(24);
+  gap: rem(16);
+  @include transition(gap);
+  svg path {
+    @include transition(fill)
+  }
+  &:hover {
+    gap: rem(20);
+    & svg path {
+      fill: $hover_red;
+    }
+    & .view_link {
+      color: $hover_red;
+    }
+  }
+}
+
+.view_link {
+  color: #000;
+  @include transition(color);
+}
+
+// Sign Up section
+
+.sign_up {
+  padding: rem(120) 0;
+}
+
+.content_images {
+  display: grid;
+  justify-items: center;
+  margin-bottom: rem(48);
+}
+
+.sign_up_offer {
+  h3 {
+    margin-bottom: rem(40);
+  }
+}
+
+.content_wrapper {
+  margin-bottom: rem(48);
+}
+
+.options_list {
+  margin-bottom: rem(24);
+  li {
+    display: flex;
+    align-items: center;
+    &::before {
+      content: "";
+      display: block;
+      margin-right: rem(8);
+      width: rem(16);
+      height: rem(16);
+      background-image: url("data:image/svg+xml,%3Csvg width='9' height='8' viewBox='0 0 9 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.96991 0.969986C7.11078 0.835875 7.29824 0.761733 7.49273 0.763205C7.68722 0.764677 7.87354 0.841647 8.01236 0.977874C8.15118 1.1141 8.23165 1.29893 8.23679 1.49336C8.24193 1.68779 8.17134 1.87661 8.03991 2.01999L4.04991 7.00999C3.9813 7.08389 3.8985 7.14319 3.80645 7.18435C3.71439 7.22552 3.61498 7.2477 3.51416 7.24956C3.41334 7.25143 3.31318 7.23295 3.21967 7.19522C3.12616 7.15749 3.04121 7.10129 2.96991 7.02999L0.323913 4.38399C0.250227 4.31532 0.191125 4.23252 0.150133 4.14052C0.109141 4.04853 0.0870986 3.94921 0.0853218 3.84851C0.083545 3.74781 0.10207 3.64778 0.139791 3.55439C0.177512 3.461 0.233657 3.37617 0.304875 3.30495C0.376094 3.23373 0.460928 3.17758 0.554316 3.13986C0.647704 3.10214 0.747733 3.08362 0.848436 3.08539C0.949139 3.08717 1.04845 3.10921 1.14045 3.15021C1.23245 3.1912 1.31525 3.2503 1.38391 3.32399L3.47791 5.41699L6.95091 0.991987C6.95717 0.984288 6.96384 0.976943 6.97091 0.969986H6.96991Z' fill='black'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: center;
+      &:first-child {
+        margin-bottom: rem(8);
+      }
+    }
+  }
+}
+
+.deliver_logo {
+  width: rem(86);
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+.btns_wrapper {
+  text-align: center;
+  a:first-child {
+    margin-bottom: rem(24);
+  }
+}
+
+// Supposr Section
+
+.support {
+  padding: rem(80) 0;
+  background: $bg_light;
+}
+
+.approve_title {
+  text-align: center;
+  max-width: rem(340);
+  margin: 0 auto rem(32) auto;
+}
+
+.government_logo {
+  max-width: rem(266);
+  margin: 0 auto;
+}
+
+// Footer
+
+.footer {
+  background: $bg_dark;
+  padding: rem(64) 0 rem(18);
+  .logo {
+    width: rem(140);
+    height: rem(50);
+    align-self: center;
+  }
+}
+
+.footer_nav {
+  display: flex;
+  flex-direction: column;
+  gap: rem(24);
+  padding-bottom: rem(24);
+  border-bottom: rem(1) solid rgba(255, 255, 255, 0.1);
+}
+
+.privacy_policy {
+  padding-top: rem(24);
+  display: flex;
+  flex-direction: column;
+  gap: rem(24);
+}
+
+.credits {
+  color: #fff;
+  order: 2;
+}
+
+.privacy_links {
+  display: flex;
+  flex-direction: column;
+  gap: rem(16);
+  a {
+    transition: color .2s ease;
+    &:hover {
+      color: #888;
+    }
+  }
+  
+}
+
+// Responsive
+
+//------------- 640 --------------- //
+@media screen and (min-width: 640px) {
+
+  // Mails
+
+  .mail_item {
+    max-width: rem(586);
+    .logo {
+      grid-area: logo;
+    }
+  }
+
+  .mail_card {
+    height: 342px;
+    padding: rem(40);
+    grid-template-columns: 1fr rem(200);
+    grid-template-rows: rem(60) 1fr;
+    grid-template-areas: "logo mark"
+                       "content content";
+  }
+
+
+  .mark_img {
+    grid-area: mark;
+    justify-self: end;
+    margin: 0;
+  }
+
+  .mark_imgs {
+    img {
+      max-width: 40%;
+      &:last-child {
+        max-width: 20%;
+      }
+    }
+  }
+  
+  .card_content {
+    grid-area: content;
+    align-self: end;
+    max-width: rem(328);
+  }
+  
+  // Sign up
+
+  .options {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .options_list {
+  }
+
+  .deliver_logo {
+    margin-right: rem(122);
+  }
+
+  .btns_wrapper {
+  }
+  .sign_btn:first-child {
+    margin-right: rem(24);
+  }
+  
+  // Support
+
+  .support {
+  }
+  
+  .support_wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .approve_title {
+    margin: 0;
+  }
+  .government_logo {
+    margin: 0;
+  }
+}
+
+//------------- 768 --------------- //
+@media screen and (min-width: 768px) {
+
+
+  // Hero screen
+  .hero_screen {
+    padding: rem(54) 0 rem(96);
+  }
+
+  .offer {
+    .logo {
+      margin-bottom: rem(14);
+    }
+  }
+  
+
+  // Mails
+
+  .mail_item {
+    &:first-child {
+      margin-bottom: rem(56);
+    }
+  }
+
+  // Sign Up
+
+  .sign_up {
+    padding: rem(114) 0 rem(90);
+  }
+
+  .content_wrapper {
+    margin-bottom: rem(12);
+  }
+
+  // Footer
+
+  .footer {
+    .logo {
+      align-self: start;
+    }
+  }
+
+  .footer_nav {
+    display: flex;
+    padding-bottom: rem(64);
+  }
+
+  .footer_menu {
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .privacy_policy {
+    padding: rem(18) 0;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .footer_nav {
+    
+  }
+  
+  .footer_menu {
+  }
+  .menu_link {
+  }
+  .privacy_policy {
+  }
+  .credits {
+  }
+  .privacy_links {
+    order: 2;
+  }
+
+  
+}
+
+//------------- 1024 --------------- //
+@media screen and (min-width: 1024px) {
+
+  // Header 
+
+  .menu_list {
+    display: flex;
+  }
+
+  .btn_hamburger {
+    display: none;
+  }
+
+  // Hero screen
+
+  .offer {
+    max-width: rem(776);
+  }
+
+  // Sign up
+
+  .content_wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .sign_up_offer {
+    max-width: rem(570);
+  }
+
+  // Support
+
+  .support_wrapper {
+    justify-content: center;
+  }
+  .approve_title {
+    text-align: right;
+    font-size: rem(28);
+  }
+  .government_logo {
+    max-width: rem(466);
+    margin-left: rem(80);
+  }
+}
+
+//------------- 1280 --------------- //
+@media screen and (min-width: 1280px) {
+
+  // Header 
+
+  .menu_list {
+    display: flex;
+  }
+
+  .btn_hamburger {
+    display: none;
+  }
+
+  // Hero screen
+
+  .hero_screen {
+    padding-bottom: rem(84);
+  }
+
+  .offer {
+    max-width: rem(524);
+    .logo {
+      width: rem(148);
+      height: rem(50);
+    }
+  }
+
+  // Mails
+
+  .mails_wrapper {
+    display: grid;
+    align-items: start;
+    gap: rem(30);
+    grid-template-columns: repeat(2,1fr);
+  }
+
+  .mail_item {
+    margin: 0;
+  }
+
+  // Sign up
+
+  .sign_up {
+    padding-bottom: rem(156);
+  }
+
+  .content_wrapper {
+    align-items: flex-start;
+  }
+
+  .sign_up_offer {
+    max-width: rem(570);
+    h3 {
+      margin-bottom: rem(90);
+    }
+  }
+
+  // Support
+
+  .support {
+    padding: rem(86) 0;
+  }
+
+  // Footer
+
+  .footer {
+    background: $bg_dark;
+    padding-top: rem(64);
+    .logo {
+      width: rem(140);
+      height: rem(50);
+    }
+  }
+
+  .footer_nav {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 0;
+  }
+
+  .footer_menu {
+    gap: rem(100);
+  }
+
+}
+
+//------------- 1536 --------------- //
+@media screen and (min-width: 1536px) {
+
+  // Header 
+
+  .menu_list {
+    display: flex;
+  }
+  
+  .btn_hamburger {
+    display: none;
+  }
+
+  // Hero screen
+
+  .hero_screen {
+    padding: rem(100) 0 rem(106);
+  }
+
+  .offer {
+    max-width: rem(646);
+    .logo {
+      margin-bottom: rem(24);
+    }
+  }
+
+  // Mails
+
+  .mails_wrapper {
+    display: grid;
+    align-items: start;
+    gap: rem(30);
+    grid-template-columns: repeat(2,1fr);
+  }
+
+  .mail_item {
+    margin: 0;
+  }
+  
+  // Sign up
+
+  .sign_up_offer {
+    max-width: rem(570);
+    h3 {
+      margin-bottom: rem(70);
+    }
+  }
+
+  // Support
+
+  .support {
+    padding: rem(86) 0;
+  }
+ 
+}
+
+
+
+
+
+
+
