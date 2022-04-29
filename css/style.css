@@ -282,6 +282,15 @@ h4 {
   }
 }
 
+.banner {
+  background: #251E1E;
+  min-height: 18.125rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
 .btn {
   padding: 0.875rem 1.5rem;
   background: #E54A4A;
@@ -383,8 +392,26 @@ h4 {
   justify-items: end;
 }
 
+.header {
+  background: #2D2A2B;
+  width: 100%;
+  top: -100%;
+  left: 0;
+  z-index: 999;
+  transition: height 0.3s ease, top 0.3s ease;
+}
+.header .logo {
+  width: 5.125rem;
+  height: 1.75rem;
+}
+.header.sticky {
+  position: sticky;
+  opacity: 1;
+  top: -0.0625rem;
+}
 .header.show {
   position: sticky;
+  top: -0.0625rem;
 }
 .header.show .menu_list {
   flex-direction: column;
@@ -432,32 +459,6 @@ h4 {
   opacity: 0;
 }
 
-.header {
-  background: #2D2A2B;
-  width: 100%;
-  top: -0.0625rem;
-  left: 0;
-  z-index: 999;
-  transition: height 0.3s ease, position 0.3s ease;
-}
-.header .logo {
-  width: 5.125rem;
-  height: 1.75rem;
-}
-.header.sticky {
-  position: sticky;
-  animation: slide_down 0.7s;
-  opacity: 1;
-}
-
-@keyframes slide_down {
-  0% {
-    top: -100%;
-  }
-  100% {
-    top: 0;
-  }
-}
 .header_wrap {
   display: flex;
   justify-content: space-between;
@@ -984,10 +985,6 @@ h4 {
   padding: 4.5rem 0;
 }
 
-.banner {
-  background: #251E1E;
-}
-
 .services_wrap {
   display: flex;
   flex-direction: column;
@@ -1120,10 +1117,6 @@ h4 {
 }
 
 @media screen and (min-width: 768px) {
-  .ipost_services {
-    padding: 5.625rem 0;
-  }
-
   .services_wrap {
     flex-direction: row;
     justify-content: center;
@@ -1173,6 +1166,10 @@ h4 {
     max-width: 60.625rem;
   }
 }
+.main_offer {
+  background: #251E1E;
+}
+
 .offer_content {
   display: flex;
   flex-direction: column;
@@ -1781,10 +1778,6 @@ h4 {
     display: block;
   }
 }
-.contact_banner {
-  padding: 5.625rem 0;
-}
-
 .contact_heading {
   color: #fff;
   text-align: center;
@@ -1881,6 +1874,151 @@ h4 {
   resize: vertical;
   overflow: hidden;
   height: 1.875rem;
+}
+
+.partner_opportunities {
+  padding: 7.5rem 0;
+}
+
+.partner_opportunities_caption {
+  margin-bottom: 2.5rem;
+}
+
+.information_content {
+  max-width: 48.125rem;
+  margin: 0 auto;
+}
+.information_content h3 {
+  margin-bottom: 1.5rem;
+}
+.information_content h2 {
+  margin-bottom: 2.5rem;
+}
+
+.text_content {
+  margin-bottom: 2.5rem;
+}
+.text_content p:not(:last-child) {
+  margin-bottom: 1.875rem;
+}
+
+.company_message span {
+  color: #E54A4A;
+}
+
+.privacy_info, .company_info, .faq, .video_tutorial {
+  padding: 7.5rem 0;
+}
+
+.info_section {
+  margin-bottom: 3rem;
+}
+
+.privacy_heading {
+  text-align: center;
+  color: #fff;
+}
+.privacy_heading h1 {
+  margin-bottom: 0.5rem;
+}
+
+.list_title {
+  margin-bottom: 0 !important;
+}
+
+.text_content span {
+  color: #E54A4A;
+}
+.text_content ul, .text_content h4 {
+  margin-bottom: 1.875rem;
+}
+.text_content .ip {
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.625rem;
+  color: #333333;
+}
+
+.company_heading {
+  max-width: 48.125rem;
+  text-align: center;
+}
+.company_heading h1 {
+  margin-bottom: 0.5rem;
+}
+
+.faq_item {
+  border-top: 0.0625rem solid #333333;
+  overflow: hidden;
+}
+.faq_item:last-child {
+  border-bottom: 0.0625rem solid #333333;
+}
+
+.faq_header {
+  padding: 3rem 0;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: padding 0.3s ease;
+}
+.faq_header::after {
+  content: "";
+  display: block;
+  width: 2rem;
+  height: 2rem;
+  background-image: url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M25.9961 10.653L16 20.397L6.00403 10.653C5.82544 10.4786 5.58569 10.3809 5.33603 10.3809C5.08638 10.3809 4.84663 10.4786 4.66803 10.653C4.58155 10.7377 4.51285 10.8389 4.46595 10.9505C4.41905 11.0621 4.3949 11.1819 4.3949 11.303C4.3949 11.4241 4.41905 11.5439 4.46595 11.6555C4.51285 11.7672 4.58155 11.8683 4.66803 11.953L15.302 22.321C15.4888 22.503 15.7393 22.6049 16 22.6049C16.2608 22.6049 16.5113 22.503 16.698 22.321L27.3321 11.955C27.4191 11.8702 27.4884 11.7688 27.5356 11.6569C27.5829 11.5449 27.6072 11.4246 27.6072 11.303C27.6072 11.1815 27.5829 11.0611 27.5356 10.9492C27.4884 10.8372 27.4191 10.7358 27.3321 10.651C27.1535 10.4766 26.9137 10.3789 26.6641 10.3789C26.4144 10.3789 26.1746 10.4766 25.9961 10.651V10.653Z' fill='black'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: transform 0.3s ease;
+}
+.faq_header h3 {
+  margin-bottom: 0;
+}
+.faq_header.open {
+  padding-bottom: 1.5rem;
+}
+.faq_header.open + .faq_content {
+  padding-bottom: 3rem;
+}
+.faq_header.open::after {
+  transform: rotate(180deg);
+}
+
+.faq_content {
+  max-height: 0;
+  transition: max-height 0.3s ease;
+  overflow: hidden;
+}
+
+.decimal_list {
+  list-style: decimal;
+  padding-left: 2rem;
+  margin-top: 1.5rem;
+}
+.decimal_list li:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+
+.disc_list {
+  list-style: disc;
+  padding-left: 1rem;
+  margin-top: 0.5rem;
+}
+.disc_list.technologies {
+  padding-left: 2rem;
+}
+
+.content_img {
+  width: 16.75rem;
+  height: 6.75rem;
+  background: #333333;
+  margin-top: 1.25rem;
+}
+
+.video_frame {
+  height: 27.5rem;
+  background: #000;
 }
 
 /*# sourceMappingURL=style.css.map */

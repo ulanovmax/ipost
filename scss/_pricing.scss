@@ -5,10 +5,6 @@
   padding: rem(72) 0;
 }
 
-.banner {
-  background: $banner_col;
-}
-
 .services_wrap {
   display: flex;
   flex-direction: column;
@@ -148,10 +144,6 @@
 @media screen and (min-width: 768px) {
 
   // Ipost Buttons
-
-  .ipost_services {
-    padding: rem(90) 0;
-  }
 
   .services_wrap {
     flex-direction: row;
