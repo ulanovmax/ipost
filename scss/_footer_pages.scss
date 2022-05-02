@@ -25,6 +25,12 @@
   p:not(:last-child) {
     margin-bottom: rem(30);
   }
+  a {
+    font-weight: 700;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }
 
 .company_message {
@@ -56,7 +62,7 @@
 }
 
 .text_content {
-  span {
+  a {
     color: $btn_col;
   }
   ul,h4 {

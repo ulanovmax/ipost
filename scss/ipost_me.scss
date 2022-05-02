@@ -183,6 +183,9 @@
   &:not(:last-child) {
     margin-bottom: rem(48);
   }
+  p:not(:last-child) {
+    margin-bottom: rem(30);
+  }
 }
 
 // Opportunities
