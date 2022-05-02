@@ -1,8 +1,8 @@
 'use strict'
 
 document.addEventListener("DOMContentLoaded", function() {
+  
   // Hamburger
-
   const btnMenu = document.querySelector('.btn_hamburger'),
   header = document.querySelector('.header'),
   menu = header.querySelector('.menu_list');
@@ -168,15 +168,16 @@ document.addEventListener("DOMContentLoaded", function() {
         formRemoveError(input);
         
         
-        /* Required fields*/
-        if (input.classList.contains('req')) {
-          if (input.value === '') {
+         
+        /* Email */
+        if (input.classList.contains('email') && input.value) {
+          if (emailTest(input)) {
             formAddError(input);
-            alert.textContent = errorMessages.require;
+            alert.textContent = errorMessages.email;
             input.after(alert);
             error++;
-          }
-        } 
+          } 
+        }
         /* Phone */
         else if (input.classList.contains('phone') && input.value) {
           if (phoneTest(input)) {
@@ -191,14 +192,14 @@ document.addEventListener("DOMContentLoaded", function() {
             error++;
           }
         }
-        /* Email */
-        else if (input.classList.contains('email,req')) {
-          if (emailTest(input)) {
+        /* Required fields*/ 
+        else if (input.classList.contains('req')) {
+          if (input.value === '') {
             formAddError(input);
-            alert.textContent = errorMessages.email;
+            alert.textContent = errorMessages.require;
             input.after(alert);
             error++;
-          } 
+          }
         } 
       }
       return error;

@@ -180,7 +180,6 @@ h4 {
   color: #fff;
   &:hover {
     background: $hover_red;
-    box-shadow: 0 0 rem(10) rgba(229, 74, 74, 0.5);
   }
   @media screen and (max-width: rem(360)) {
     font-size: rem(16);
@@ -342,7 +341,7 @@ h4 {
     }
     &:hover {
       margin-bottom: rem(10);
-      background: #F35454;
+      background: $hover_red;
     }
     &.hidden {
       opacity: 0;
