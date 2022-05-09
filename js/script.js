@@ -80,8 +80,6 @@ document.addEventListener("DOMContentLoaded", function() {
       });
     });
   }
-  
-
 
   // Contact Form
 

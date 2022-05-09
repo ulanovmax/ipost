@@ -21,19 +21,9 @@
   max-width: rem(370);
   margin: 0 auto;
   &.loading {
-    .form_btn {
-      position: relative;
-      &::before {
-        content: '';
-        position: absolute;
-        width: rem(56);
-        height: rem(56);
-        top: 0;
-        background: url('../img/spinner_form.svg') no-repeat center / contain;
-      }
-      span {
-        opacity: 0;
-      }
+    .form_loader {
+      opacity: 1;
+      visibility: visible;
     }
   }
 }
@@ -102,4 +92,114 @@
   overflow: hidden;
   height: rem(30);
 }
+
+// Loader Animation
+
+.form_loader {
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba($color: #000, $alpha: 0.3);
+}
+
+.dot {
+  width: rem(24);
+  height: rem(24);
+  background: #fff;
+  border-radius: 100%;
+  display: inline-block;
+  animation: slide 1s infinite;
+  &:nth-child(1) {
+    animation-delay: 0.1s;
+  }
+  &:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  &:nth-child(3) {
+    animation-delay: 0.3s;
+  }
+  &:nth-child(4) {
+    animation-delay: 0.4s;
+  }
+  &:nth-child(5) {
+    animation-delay: 0.5s;
+  }
+}
+
+@keyframes slide {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.3;
+    transform: scale(2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+// Pop Up
+
+.contact_pop_up {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba($color: #000, $alpha: 0.3);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity $trans ease, visibility $trans ease;
+  &.send {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.pop_up_content {
+  max-width: rem(570);
+  width: 100%;
+  height: rem(294);
+  background: #fff;
+  box-shadow: rem(8) rem(8) rem(24) rgba(0, 0, 0, 0.15);
+  border-radius: rem(8);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 rem(16);
+  @media screen and (min-width: rem(768)) {
+    margin: 0 rem(30);
+  }
+  @media screen and (min-width: rem(1280)) {
+    margin: 0;
+  } 
+  p {
+    max-width: rem(278);
+    margin: 0 auto;
+    margin: rem(16) auto rem(32);
+    @media screen and (min-width: rem(480)) {
+      max-width: rem(480);
+    }
+  }
+}
+
+.pop_up_btn {
+  width: rem(120);
+  height: rem(50);
+  margin: 0 auto;
+}
+
 

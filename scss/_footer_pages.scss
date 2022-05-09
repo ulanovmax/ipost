@@ -114,6 +114,7 @@
   }
   h3 {
     margin-bottom: 0;
+    max-width: rem(728);
   }
   &.open {
     padding-bottom: rem(24);
@@ -164,3 +165,14 @@
   background: #000;
 }
 
+// Terms 
+
+.terms_heading {
+  text-align: center;
+  h1 {
+    margin-bottom: rem(8);
+  }
+  .text_content {
+    margin-bottom: 0;
+  }
+}
