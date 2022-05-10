@@ -699,6 +699,11 @@ h4 {
   display: none;
 }
 
+.footer_logo_wrap a {
+  display: block;
+  margin-top: 0.625rem;
+}
+
 .footer_nav {
   display: flex;
   flex-direction: column;
@@ -816,6 +821,7 @@ h4 {
   .footer_nav {
     display: flex;
     padding-bottom: 4rem;
+    align-items: center;
   }
 
   .footer_menu {
@@ -1936,6 +1942,7 @@ h4 {
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 1000;
 }
 .contact_pop_up.send {
   opacity: 1;
@@ -2131,6 +2138,7 @@ h4 {
 
 .video_frame {
   height: 27.5rem;
+  width: 100%;
   background: #000;
 }
 

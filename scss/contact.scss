@@ -162,6 +162,7 @@
   opacity: 0;
   visibility: hidden;
   transition: opacity $trans ease, visibility $trans ease;
+  z-index: 1000;
   &.send {
     opacity: 1;
     visibility: visible;

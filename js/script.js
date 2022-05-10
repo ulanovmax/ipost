@@ -85,7 +85,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
   const form = document.getElementById('contact_form'),
         formElements = document.querySelector('.form_body'),
-        textarea = document.querySelector('.form_textarea');
+        textarea = document.querySelector('.form_textarea'),
+        popUp = document.querySelector('.contact_pop_up');
 
   if (form) {
 
@@ -132,12 +133,29 @@ document.addEventListener("DOMContentLoaded", function() {
           alert(result);
           form.reset();
           form.classList.remove('loading');
+          popUp.classList.add('send');
         } else {
           alert('Error');
           form.classList.remove('loading');
+          popUp.classList.add('send');
         }
       }
     }
+
+    // Pop UP
+
+    popUp.addEventListener('click', (event) => {
+      if (event.target === popUp || event.target.getAttribute('data-close') == '') {
+        popUp.classList.remove('send');
+      }
+    })
+
+    // Close with Escape
+    document.addEventListener('keydown', (event) => {
+      if (event.code === 'Escape' && popUp.classList.contains('send')) {
+        popUp.classList.remove('send');
+      }
+    })
 
     // Form validation
     function formValidate(form) {
