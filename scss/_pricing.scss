@@ -1,12 +1,7 @@
-
 // Services section
 
 .ipost_services {
   padding: rem(72) 0;
-}
-
-.banner {
-  background: $banner_col;
 }
 
 .services_wrap {
@@ -63,27 +58,27 @@
 
 .pricing_item {
   padding: rem(24) rem(16);
-    &:nth-child(odd) {
-      background: $bg_light;
-    }
-    &::before {
-      @extend %flex_center;
-      width: rem(42);
-      height: rem(42);
-      border-radius: 50%;
-      color: #fff;
-      font-size: rem(18);
-      font-weight: 700;
-      margin-bottom: rem(24);
-    }
-    &.c5::before {
-      content: 'C5';
-      background: #37A348;
-    }
-    &.c4::before {
-      content: 'C4';
-      background: #2284BB;
-    }
+  &:nth-child(odd) {
+    background: $bg_light;
+  }
+  &::before {
+    @extend %flex_center;
+    width: rem(42);
+    height: rem(42);
+    border-radius: 50%;
+    color: #fff;
+    font-size: rem(18);
+    font-weight: 700;
+    margin-bottom: rem(24);
+  }
+  &.c5::before {
+    content: "C5";
+    background: #37a348;
+  }
+  &.c4::before {
+    content: "C4";
+    background: #2284bb;
+  }
 }
 
 .price_content {
@@ -101,7 +96,7 @@
   @media screen and (max-width: rem(360)) {
     max-width: rem(210);
   }
-  max-width: rem(408); 
+  max-width: rem(408);
 }
 
 .option_name {
@@ -110,7 +105,6 @@
   }
   max-width: 100%;
 }
-
 
 .price_amount {
   font-weight: 700;
@@ -133,32 +127,26 @@
   text-align: center;
   padding: rem(24) 0;
   background: $bg_light;
-    h3 {
-      max-width: rem(500);
-      margin: 0 auto;
-      br {
-        display: none;
-      }
+  h3 {
+    max-width: rem(500);
+    margin: 0 auto;
+    br {
+      display: none;
     }
+  }
 }
 
 // Responsive
 
 //------------- 768 --------------- //
-@media screen and (min-width: 768px) {
-
+@media screen and (min-width: rem(768)) {
   // Ipost Buttons
-
-  .ipost_services {
-    padding: rem(90) 0;
-  }
 
   .services_wrap {
     flex-direction: row;
     justify-content: center;
     gap: rem(124);
   }
-  
 
   // Pricing
 
@@ -171,10 +159,10 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-      &::before {
-        flex: 0 0 auto;
-        margin: 0 rem(24) 0 0;
-      }
+    &::before {
+      flex: 0 0 auto;
+      margin: 0 rem(24) 0 0;
+    }
   }
 
   .pricing_offer {
@@ -188,8 +176,7 @@
 }
 
 //------------- 1280 --------------- //
-@media screen and (min-width: 1280px) {
-
+@media screen and (min-width: rem(1280)) {
   .services_wrap {
     gap: rem(176);
   }

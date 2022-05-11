@@ -1,88 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Now you can send letters as easily as email">
-  <title>iPost</title>
-  <!-- OG-tags -->
-  <meta property="og:title" content="iPost">
-  <meta property="og:type" content="article">
-  <meta property="og:site_name" content="iPost">
-  <!-- Favicon -->
-  <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
-  <link rel="manifest" href="img/favicon/site.webmanifest">
-  <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#5bbad5">
-  <meta name="msapplication-TileColor" content="#da532c">
-  <meta name="theme-color" content="#ffffff">
-  <!-- CSS -->
-  <link rel="stylesheet" href="css/style.css"/>
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Inter:300,regular,500,600,700" rel="stylesheet" />
-</head>
-<body>
-  
-  <header class="header">
-    <div class="container">
-      <div class="header_wrap">
-        <a class="logo" href="index.html"></a>
-        <nav>
-          <ul class="menu_list">
-            <li class="menu_item"><a href="ipost_me.html" class="menu_link">iPost Me</a></li>
-            <li class="menu_item"><a href="ipost_bussiness.html" class="menu_link">iPost Business</a></li>
-            <li class="menu_item"><a href="pricing.html" class="menu_link">Pricing</a></li>
-            <li class="menu_item"><a href="contact.html" class="menu_link">Contact</a></li>
-            <li class="menu_item"><a href="log_in.html" class="menu_link">Log in</a></li>
-          </ul>
-        </nav>
-        <div class="btn_hamburger">
-          <span></span>
-          <span></span>
-          <span></span>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Now you can send letters as easily as email"/>
+    <title>iPost</title>
+    <!-- OG-tags -->
+    <meta property="og:title" content="iPost" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="iPost" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png"/>
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png"/>
+    <link rel="manifest" href="img/favicon/site.webmanifest"/>
+    <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#5bbad5"/>
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header_wrap">
+          <a class="logo" href="index.html"></a>
+          <nav>
+            <ul class="menu_list">
+              <li class="menu_item">
+                <a href="ipost_me.html" class="menu_link">iPost Me</a>
+              </li>
+              <li class="menu_item">
+                <a href="ipost_bussiness.html" class="menu_link"
+                  >iPost Business</a
+                >
+              </li>
+              <li class="menu_item">
+                <a href="pricing.html" class="menu_link">Pricing</a>
+              </li>
+              <li class="menu_item">
+                <a href="contact.html" class="menu_link">Contact</a>
+              </li>
+              <li class="menu_item">
+                <a href="#" class="menu_link">Log in</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="btn_hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
         </div>
       </div>
-    </div>
-  </header>
+    </header>
 
-  <section class="video">
-    <div class="container">
+    <div id="scroller" class="hidden"></div>
+    <section class="video_banner banner">
+      <div class="container">
+        <div class="video_heading">
+          <h1>Video Tutorial</h1>
+        </div>
+      </div>
+    </section>
 
-    </div>
-  </section>
+    <section class="video_tutorial">
+      <div class="container">
+        <div class="information_content">
+          <iframe
+            class="video_frame"
+            controls="0"
+            modestbranding="1"
+            rel="0"
+            src="https://www.youtube.com/embed/YS9KgsoXbEU"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          >
+          </iframe>
+        </div>
+      </div>
+    </section>
 
-  <footer class="footer">
-    <div class="container">
-      <div class="footer_nav">
-        <a class="logo" href="index.html"></a>
-        <nav>
-          <ul class="footer_menu">
-            <li><a href="faq.html" class="menu_link">FAQ</a></li>
-            <li><a href="#" class="menu_link">Video Tutorial</a></li>
-            <li><a href="#" class="menu_link">Partner Opportunities</a></li>
-            <li><a href="contact.html" class="menu_link">Contact</a></li>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer_nav">
+          <div class="footer_logo_wrap">
+            <a class="logo" href="index.html"></a>
+            <a href="mailto:info@icomunico.com" class="footer_mail"
+              >info@icomunico.com</a
+            >
+          </div>
+          <nav>
+            <ul class="footer_menu">
+              <li><a href="company.html" class="menu_link">Company</a></li>
+              <li>
+                <a href="partner_opportunities.html" class="menu_link"
+                  >Partner Opportunities</a
+                >
+              </li>
+              <li><a href="faq.html" class="menu_link">FAQ</a></li>
+              <li><a href="video.html" class="menu_link">Video Tutorial</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="privacy_policy">
+          <p class="credits">iPost © 2022 All rights reserved</p>
+          <ul class="footer_menu privacy_links">
+            <li><a href="privacy.html">Privacy</a></li>
+            <li><a href="terms.html">Terms & Conditions</a></li>
           </ul>
-        </nav>
+        </div>
       </div>
+    </footer>
 
-      <div class="privacy_policy">
-        <p class="credits">
-          iPost © 2022 All rights reserved
-        </p>
-        <ul class="footer_menu privacy_links">
-          <li><a href="#">Accessibility</a></li>
-          <li><a href="#">Privacy</a></li>
-          <li><a href="#">Terms & Conditions</a></li>  
-        </ul>
-      </div>
-    </div>
-  </footer>
-
-  <!-- JS -->
-  <script src="js/script.js"></script>
-
-  
-</body>
+    <!-- JS -->
+    <script defer src="js/script.js"></script>
+  </body>
 </html>
