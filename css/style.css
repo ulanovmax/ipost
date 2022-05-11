@@ -165,7 +165,7 @@ html {
 }
 
 body {
-  font-family: "Inter", sans-serif;
+  font-family: Inter, Arial, sans-serif;
   font-weight: 400;
   color: #333333;
   overflow-y: scroll;
@@ -389,7 +389,7 @@ h4 {
   opacity: 0;
 }
 .btn_hamburger.open span:nth-child(3) {
-  transform: translateY(-0.8125rem) rotate(-45deg);
+  transform: translateY(-0.75rem) rotate(-45deg);
   width: 100%;
 }
 .btn_hamburger.open {
