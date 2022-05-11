@@ -1,11 +1,9 @@
-
 .header_wrap {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: rem(18) 0;
 }
-
 
 .menu_list {
   position: fixed;
@@ -41,9 +39,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: url('../img/banner_mobile.jpg') no-repeat 60% 50% / cover;
+  background: url("../img/banner_mobile.jpg") no-repeat 60% 50% / cover;
   @media screen and (min-width: 1024px) {
-    background: url('../img/banner.jpg') no-repeat 60% 50% / cover;
+    background: url("../img/banner.jpg") no-repeat 60% 50% / cover;
   }
 }
 
@@ -87,10 +85,10 @@
   border-radius: rem(4);
   filter: drop-shadow(8px 8px 8px rgba(0, 0, 0, 0.07));
   &.grey {
-    background: url('../img/bg_mail_grey.jpg') no-repeat center / cover;
+    background: url("../img/bg_mail_grey.jpg") no-repeat center / cover;
   }
   &.gold {
-    background: url('../img/bg_mail_gold.jpg') no-repeat center / cover;
+    background: url("../img/bg_mail_gold.jpg") no-repeat center / cover;
   }
   .logo {
     position: relative;
@@ -131,7 +129,7 @@
   gap: rem(16);
   @include transition(gap);
   svg path {
-    @include transition(fill)
+    @include transition(fill);
   }
   &:hover {
     gap: rem(20);
@@ -234,7 +232,7 @@
     align-self: center;
   }
   a {
-    transition: color .2s ease;
+    transition: color 0.2s ease;
     &:hover {
       color: #888;
     }
@@ -249,7 +247,7 @@
     display: block;
     margin-top: rem(16);
   }
-} 
+}
 
 .footer_nav {
   display: flex;
@@ -281,7 +279,6 @@
 
 //------------- 640 --------------- //
 @media screen and (min-width: 640px) {
-
   // Mails
 
   .mail_item {
@@ -296,10 +293,10 @@
     padding: rem(40);
     grid-template-columns: 1fr rem(200);
     grid-template-rows: rem(60) 1fr;
-    grid-template-areas: "logo mark"
-                       "content content";
+    grid-template-areas:
+      "logo mark"
+      "content content";
   }
-
 
   .mark_img {
     grid-area: mark;
@@ -315,13 +312,13 @@
       }
     }
   }
-  
+
   .card_content {
     grid-area: content;
     align-self: end;
     max-width: rem(328);
   }
-  
+
   // Sign up
 
   .options {
@@ -337,7 +334,7 @@
   .sign_btn:first-child {
     margin-right: rem(24);
   }
-  
+
   // Support
 
   .support_wrapper {
@@ -355,8 +352,6 @@
 
 //------------- 768 --------------- //
 @media screen and (min-width: 768px) {
-
-
   // Hero screen
   .hero_screen {
     padding: rem(54) 0 rem(96);
@@ -367,7 +362,7 @@
       margin-bottom: rem(14);
     }
   }
-  
+
   // Mails
 
   .mail_item {
@@ -420,14 +415,11 @@
   .privacy_links {
     order: 2;
   }
-
-  
 }
 
 //------------- 1024 --------------- //
 @media screen and (min-width: 1024px) {
-
-  // Header 
+  // Header
 
   .menu_list {
     display: flex;
@@ -471,8 +463,7 @@
 
 //------------- 1280 --------------- //
 @media screen and (min-width: 1280px) {
-
-  // Header 
+  // Header
 
   .menu_list {
     display: flex;
@@ -502,7 +493,7 @@
     display: grid;
     align-items: start;
     gap: rem(30);
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .mail_item {
@@ -552,18 +543,16 @@
     justify-content: space-between;
     gap: 0;
   }
-
 }
 
 //------------- 1536 --------------- //
 @media screen and (min-width: 1536px) {
-
-  // Header 
+  // Header
 
   .menu_list {
     display: flex;
   }
-  
+
   .btn_hamburger {
     display: none;
   }
@@ -587,13 +576,13 @@
     display: grid;
     align-items: start;
     gap: rem(30);
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .mail_item {
     margin: 0;
   }
-  
+
   // Sign up
 
   .sign_up_offer {
@@ -608,12 +597,4 @@
   .support {
     padding: rem(86) 0;
   }
- 
 }
-
-
-
-
-
-
-

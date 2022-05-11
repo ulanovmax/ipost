@@ -1,4 +1,3 @@
-
 // Partner Opportunities
 
 .partner_opportunities {
@@ -41,7 +40,10 @@
 
 // Privacy
 
-.privacy_info, .company_info, .faq, .video_tutorial {
+.privacy_info,
+.company_info,
+.faq,
+.video_tutorial {
   padding: rem(120) 0;
 }
 
@@ -65,7 +67,8 @@
   a {
     color: $btn_col;
   }
-  ul,h4 {
+  ul,
+  h4 {
     margin-bottom: rem(30);
   }
   .ip {
@@ -124,7 +127,7 @@
     &::after {
       transform: rotate(180deg);
     }
-  } 
+  }
 }
 
 .faq_content {
@@ -158,7 +161,7 @@
   margin-top: rem(20);
 }
 
-// Video 
+// Video
 
 .video_frame {
   height: rem(440);
@@ -166,7 +169,7 @@
   background: #000;
 }
 
-// Terms 
+// Terms
 
 .terms_heading {
   text-align: center;
