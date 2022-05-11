@@ -40,7 +40,7 @@
   align-items: center;
   justify-content: center;
   background: url("../img/banner_mobile.jpg") no-repeat 60% 50% / cover;
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: rem(1024)) {
     background: url("../img/banner.jpg") no-repeat 60% 50% / cover;
   }
 }
@@ -83,7 +83,7 @@
   display: grid;
   padding: rem(32);
   border-radius: rem(4);
-  filter: drop-shadow(8px 8px 8px rgba(0, 0, 0, 0.07));
+  filter: drop-shadow(rem(8) rem(8) rem(8) rgba(0, 0, 0, 0.07));
   &.grey {
     background: url("../img/bg_mail_grey.jpg") no-repeat center / cover;
   }
@@ -278,7 +278,7 @@
 // Responsive
 
 //------------- 640 --------------- //
-@media screen and (min-width: 640px) {
+@media screen and (min-width: rem(640)) {
   // Mails
 
   .mail_item {
@@ -289,7 +289,7 @@
   }
 
   .mail_card {
-    height: 342px;
+    height: rem(342);
     padding: rem(40);
     grid-template-columns: 1fr rem(200);
     grid-template-rows: rem(60) 1fr;
@@ -351,7 +351,7 @@
 }
 
 //------------- 768 --------------- //
-@media screen and (min-width: 768px) {
+@media screen and (min-width: rem(768)) {
   // Hero screen
   .hero_screen {
     padding: rem(54) 0 rem(96);
@@ -418,7 +418,7 @@
 }
 
 //------------- 1024 --------------- //
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: rem(1024)) {
   // Header
 
   .menu_list {
@@ -462,7 +462,7 @@
 }
 
 //------------- 1280 --------------- //
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: rem(1280)) {
   // Header
 
   .menu_list {
@@ -546,7 +546,7 @@
 }
 
 //------------- 1536 --------------- //
-@media screen and (min-width: 1536px) {
+@media screen and (min-width: rem(1536)) {
   // Header
 
   .menu_list {

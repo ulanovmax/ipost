@@ -261,7 +261,7 @@
 
 //------------- 768 --------------- //
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: rem(768)) {
   // Save options
 
   .save_options {
@@ -316,7 +316,7 @@
 
 //------------- 1024 --------------- //
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: rem(1024)) {
   // Safe offer
   .heading_content {
     margin-bottom: rem(72);
@@ -360,7 +360,7 @@
 
 //------------- 1280 --------------- //
 
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: rem(1280)) {
   // Section 'About'
 
   .about_content {
