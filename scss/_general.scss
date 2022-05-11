@@ -53,7 +53,7 @@ html {
 }
 
 body {
-  font-family: "Inter", sans-serif;
+  font-family: Inter, Arial, sans-serif;
   font-weight: 400;
   color: $text_col;
   overflow-y: scroll;
@@ -270,7 +270,7 @@ h4 {
       opacity: 0;
     }
     &:nth-child(3) {
-      transform: translateY(rem(-13)) rotate(-45deg);
+      transform: translateY(rem(-12)) rotate(-45deg);
       width: 100%;
     }
   }

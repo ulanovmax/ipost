@@ -134,7 +134,9 @@ table {
   border-spacing: 0;
 }
 
-input, button, textarea {
+input,
+button,
+textarea {
   font-family: inherit;
 }
 
@@ -174,7 +176,8 @@ img {
   max-width: 100%;
 }
 
-span, a {
+span,
+a {
   display: inline-block;
   line-height: 1.625rem;
 }
@@ -199,7 +202,9 @@ p {
   }
 }
 
-h1, h2, h4 {
+h1,
+h2,
+h4 {
   font-weight: 700;
 }
 
@@ -283,7 +288,7 @@ h4 {
 }
 
 .banner {
-  background: #251E1E;
+  background: #251e1e;
   min-height: 18.125rem;
   display: flex;
   align-items: center;
@@ -293,7 +298,7 @@ h4 {
 
 .btn {
   padding: 0.875rem 1.5rem;
-  background: #E54A4A;
+  background: #e54a4a;
   border-radius: 1.625rem;
   font-size: 1.125rem;
   font-weight: 700;
@@ -302,7 +307,7 @@ h4 {
   color: #fff;
 }
 .btn:hover {
-  background: #D43B3B;
+  background: #d43b3b;
   box-shadow: 0.5rem 0.375rem 1.5rem rgba(227, 44, 38, 0.4);
 }
 @media screen and (max-width: 22.5rem) {
@@ -343,7 +348,8 @@ h4 {
   position: relative;
   transition: color 0.3s ease;
 }
-.menu_link:before, .menu_link a:after {
+.menu_link:before,
+.menu_link a:after {
   content: "";
   position: absolute;
   transition: left 0.3s ease;
@@ -353,10 +359,10 @@ h4 {
   bottom: 0;
   width: 100%;
   height: 0.125rem;
-  background: #E54A4A;
+  background: #e54a4a;
 }
 .menu_link:hover {
-  color: #E54A4A;
+  color: #e54a4a;
 }
 .menu_link:hover:before {
   left: 0;
@@ -385,7 +391,7 @@ h4 {
   opacity: 0;
 }
 .btn_hamburger.open span:nth-child(3) {
-  transform: translateY(-0.8125rem) rotate(-45deg);
+  transform: translateY(-0.75rem) rotate(-45deg);
   width: 100%;
 }
 .btn_hamburger.open {
@@ -393,7 +399,7 @@ h4 {
 }
 
 .header {
-  background: #2D2A2B;
+  background: #2d2a2b;
   width: 100%;
   top: -100%;
   left: 0;
@@ -434,7 +440,7 @@ h4 {
   width: 3.125rem;
   height: 3.125rem;
   cursor: pointer;
-  background: #E54A4A;
+  background: #e54a4a;
   opacity: 1;
   transition: background 0.3s ease, margin 0.3s ease, opacity 0.3s ease;
 }
@@ -453,7 +459,7 @@ h4 {
 }
 #scroller:hover {
   margin-bottom: 0.625rem;
-  background: #D43B3B;
+  background: #d43b3b;
 }
 #scroller.hidden {
   opacity: 0;
@@ -470,7 +476,7 @@ h4 {
   position: fixed;
   left: -100%;
   top: 0;
-  background: #2D2A2B;
+  background: #2d2a2b;
   width: 100%;
   height: 100%;
   align-items: center;
@@ -601,10 +607,10 @@ h4 {
   gap: 1.25rem;
 }
 .details_wrap:hover svg path {
-  fill: #D43B3B;
+  fill: #d43b3b;
 }
 .details_wrap:hover .view_link {
-  color: #D43B3B;
+  color: #d43b3b;
 }
 
 .view_link {
@@ -666,7 +672,7 @@ h4 {
 
 .support {
   padding: 5rem 0;
-  background: #F8F6F4;
+  background: #f8f6f4;
 }
 
 .approve_title {
@@ -681,7 +687,7 @@ h4 {
 }
 
 .footer {
-  background: #2D2A2B;
+  background: #2d2a2b;
   padding: 4rem 0 1.125rem;
 }
 .footer .logo {
@@ -933,7 +939,7 @@ h4 {
   }
 
   .footer {
-    background: #2D2A2B;
+    background: #2d2a2b;
     padding-top: 4rem;
   }
   .footer .logo {
@@ -1049,7 +1055,7 @@ h4 {
   padding: 1.5rem 1rem;
 }
 .pricing_item:nth-child(odd) {
-  background: #F8F6F4;
+  background: #f8f6f4;
 }
 .pricing_item::before {
   width: 2.625rem;
@@ -1062,11 +1068,11 @@ h4 {
 }
 .pricing_item.c5::before {
   content: "C5";
-  background: #37A348;
+  background: #37a348;
 }
 .pricing_item.c4::before {
   content: "C4";
-  background: #2284BB;
+  background: #2284bb;
 }
 
 .price_content {
@@ -1118,7 +1124,7 @@ h4 {
 .pricing_offer {
   text-align: center;
   padding: 1.5rem 0;
-  background: #F8F6F4;
+  background: #f8f6f4;
 }
 .pricing_offer h3 {
   max-width: 31.25rem;
@@ -1179,7 +1185,7 @@ h4 {
   }
 }
 .main_offer {
-  background: #251E1E;
+  background: #251e1e;
 }
 
 .offer_content {
@@ -1204,7 +1210,7 @@ h4 {
 }
 
 .advantages {
-  background: #E32C26;
+  background: #e32c26;
   padding: 2.5rem 0;
 }
 
@@ -1322,7 +1328,7 @@ h4 {
 
 .about {
   padding: 3rem 0;
-  background: #F8F6F4;
+  background: #f8f6f4;
 }
 
 .about_text {
@@ -1478,7 +1484,9 @@ h4 {
     font-size: 1.125rem;
     justify-self: start;
   }
-  .content_wrap .options_list, .content_wrap .heading_content, .content_wrap .content_images {
+  .content_wrap .options_list,
+.content_wrap .heading_content,
+.content_wrap .content_images {
     margin: 0;
   }
 }
@@ -1500,7 +1508,7 @@ h4 {
 }
 .quote {
   padding: 3.375rem 0 4.375rem;
-  background: #F8F6F4;
+  background: #f8f6f4;
 }
 .quote .royal_mail {
   width: 5.25rem;
@@ -1651,7 +1659,7 @@ h4 {
 
 .section_info {
   padding: 4rem 0;
-  background: #F8F6F4;
+  background: #f8f6f4;
 }
 
 .info_item h2 {
@@ -1840,7 +1848,7 @@ h4 {
   transition: opacity 0.3s ease, visibility 0.3s ease, top 0.3s ease;
 }
 .form_item .error_message {
-  color: #E54A4A;
+  color: #e54a4a;
   font-size: 0.75rem;
   margin-top: 0.25rem;
 }
@@ -1864,7 +1872,7 @@ h4 {
   top: -0.75rem;
 }
 .form_input.error {
-  border-bottom: 0.0625rem solid #E83434;
+  border-bottom: 0.0625rem solid #e83434;
 }
 
 .form_btn {
@@ -2025,10 +2033,13 @@ h4 {
 }
 
 .company_message span {
-  color: #E54A4A;
+  color: #e54a4a;
 }
 
-.privacy_info, .company_info, .faq, .video_tutorial {
+.privacy_info,
+.company_info,
+.faq,
+.video_tutorial {
   padding: 7.5rem 0;
 }
 
@@ -2049,9 +2060,10 @@ h4 {
 }
 
 .text_content a {
-  color: #E54A4A;
+  color: #e54a4a;
 }
-.text_content ul, .text_content h4 {
+.text_content ul,
+.text_content h4 {
   margin-bottom: 1.875rem;
 }
 .text_content .ip {
