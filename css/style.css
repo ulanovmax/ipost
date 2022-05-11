@@ -165,7 +165,7 @@ html {
 }
 
 body {
-  font-family: Inter, Arial, sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 400;
   color: #333333;
   overflow-y: scroll;
@@ -184,7 +184,6 @@ a {
 
 span {
   font-weight: 600;
-  color: #333333;
 }
 
 a {
@@ -257,7 +256,6 @@ h3 {
 
 h4 {
   font-size: 1rem;
-  font-weight: 700;
   line-height: 1.625rem;
 }
 @media screen and (min-width: 80rem) {
@@ -342,8 +340,8 @@ h4 {
 
 .menu_link {
   display: inline-flex;
-  padding-top: 10px;
-  padding-bottom: 5px;
+  padding-top: 0.625rem;
+  padding-bottom: 0.3125rem;
   overflow: hidden;
   position: relative;
   transition: color 0.3s ease;
@@ -512,7 +510,7 @@ h4 {
   justify-content: center;
   background: url("../img/banner_mobile.jpg") no-repeat 60% 50%/cover;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 64rem) {
   .hero_screen {
     background: url("../img/banner.jpg") no-repeat 60% 50%/cover;
   }
@@ -554,7 +552,7 @@ h4 {
   display: grid;
   padding: 2rem;
   border-radius: 0.25rem;
-  filter: drop-shadow(8px 8px 8px rgba(0, 0, 0, 0.07));
+  filter: drop-shadow(0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.07));
 }
 .mail_card.grey {
   background: url("../img/bg_mail_grey.jpg") no-repeat center/cover;
@@ -736,7 +734,7 @@ h4 {
   gap: 1rem;
 }
 
-@media screen and (min-width: 640px) {
+@media screen and (min-width: 40rem) {
   .mail_item {
     max-width: 36.625rem;
   }
@@ -745,7 +743,7 @@ h4 {
   }
 
   .mail_card {
-    height: 342px;
+    height: 21.375rem;
     padding: 2.5rem;
     grid-template-columns: 1fr 12.5rem;
     grid-template-rows: 3.75rem 1fr;
@@ -799,7 +797,7 @@ h4 {
     margin: 0;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48rem) {
   .hero_screen {
     padding: 3.375rem 0 6rem;
   }
@@ -851,7 +849,7 @@ h4 {
     order: 2;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 64rem) {
   .menu_list {
     display: flex;
   }
@@ -887,7 +885,7 @@ h4 {
     margin-left: 5rem;
   }
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 80rem) {
   .menu_list {
     display: flex;
   }
@@ -957,7 +955,7 @@ h4 {
     gap: 0;
   }
 }
-@media screen and (min-width: 1536px) {
+@media screen and (min-width: 96rem) {
   .menu_list {
     display: flex;
   }
@@ -1134,7 +1132,7 @@ h4 {
   display: none;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48rem) {
   .services_wrap {
     flex-direction: row;
     justify-content: center;
@@ -1163,7 +1161,7 @@ h4 {
     display: inline;
   }
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 80rem) {
   .services_wrap {
     gap: 11rem;
   }
@@ -1414,7 +1412,7 @@ h4 {
     justify-self: center;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48rem) {
   .save_options {
     grid-template-areas: "option option" "option option" "option option" "total  total";
   }
@@ -1458,7 +1456,7 @@ h4 {
     line-height: 1.625rem;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 64rem) {
   .heading_content {
     margin-bottom: 4.5rem;
   }
@@ -1490,7 +1488,7 @@ h4 {
     margin: 0;
   }
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 80rem) {
   .about_content {
     display: flex;
     align-items: end;
@@ -1686,7 +1684,7 @@ h4 {
   margin-bottom: 3rem;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48rem) {
   .quote_message {
     max-width: 28.875rem;
     margin: 0 auto;
@@ -1746,7 +1744,7 @@ h4 {
     justify-content: center;
   }
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 80rem) {
   .quote_message {
     max-width: 35.625rem;
   }
@@ -1796,7 +1794,7 @@ h4 {
     justify-content: space-between;
   }
 }
-@media screen and (max-width: 362px) {
+@media screen and (max-width: 22.625rem) {
   .try_btn_today {
     display: block;
   }
@@ -2152,9 +2150,14 @@ h4 {
 }
 
 .video_frame {
-  height: 27.5rem;
+  min-height: 18.75rem;
   width: 100%;
   background: #000;
+}
+@media screen and (min-width: 40rem) {
+  .video_frame {
+    height: 27.5rem;
+  }
 }
 
 .terms_heading {

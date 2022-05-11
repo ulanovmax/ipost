@@ -207,7 +207,7 @@
 
 //------------- 768 --------------- //
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: rem(768)) {
   // Quote
   .quote_message {
     max-width: rem(462);
@@ -280,7 +280,7 @@
 
 //------------- 1280 --------------- //
 
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: rem(1280)) {
   // Quote
 
   .quote_message {
@@ -352,7 +352,7 @@
 
 // Extra breakpoints
 
-@media screen and (max-width: 362px) {
+@media screen and (max-width: rem(362)) {
   .try_btn_today {
     display: block;
   }

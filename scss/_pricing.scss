@@ -139,7 +139,7 @@
 // Responsive
 
 //------------- 768 --------------- //
-@media screen and (min-width: 768px) {
+@media screen and (min-width: rem(768)) {
   // Ipost Buttons
 
   .services_wrap {
@@ -176,7 +176,7 @@
 }
 
 //------------- 1280 --------------- //
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: rem(1280)) {
   .services_wrap {
     gap: rem(176);
   }

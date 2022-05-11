@@ -72,7 +72,6 @@ a {
 
 span {
   font-weight: 600;
-  color: $text_col;
 }
 
 a {
@@ -133,7 +132,6 @@ h3 {
 
 h4 {
   font-size: rem(16);
-  font-weight: 700;
   line-height: rem(26);
   @media screen and (min-width: rem(1280)) {
     font-size: rem(18);
@@ -218,8 +216,8 @@ h4 {
 
 .menu_link {
   display: inline-flex;
-  padding-top: 10px;
-  padding-bottom: 5px;
+  padding-top: rem(10);
+  padding-bottom: rem(5);
   overflow: hidden;
   position: relative;
   transition: color 0.3s ease;
