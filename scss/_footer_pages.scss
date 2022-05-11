@@ -100,6 +100,7 @@
   padding: rem(48) 0;
   display: flex;
   justify-content: space-between;
+  gap: rem(28);
   cursor: pointer;
   @include transition(padding);
   &::after {
@@ -114,7 +115,6 @@
   }
   h3 {
     margin-bottom: 0;
-    max-width: rem(728);
   }
   &.open {
     padding-bottom: rem(24);

@@ -205,7 +205,7 @@
   }
 }
 
-// Supposr Section
+// Support Section
 
 .support {
   padding: rem(80) 0;
@@ -247,7 +247,7 @@
 .footer_logo_wrap {
   a {
     display: block;
-    margin-top: rem(10);
+    margin-top: rem(16);
   }
 } 
 
@@ -397,7 +397,9 @@
   .footer_nav {
     display: flex;
     padding-bottom: rem(64);
+    flex-direction: row;
     align-items: center;
+    justify-content: space-between;
   }
 
   .footer_menu {
@@ -405,6 +407,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: rem(40);
   }
 
   .privacy_policy {
@@ -414,18 +417,6 @@
     justify-content: space-between;
   }
 
-  .footer_nav {
-    
-  }
-  
-  .footer_menu {
-  }
-  .menu_link {
-  }
-  .privacy_policy {
-  }
-  .credits {
-  }
   .privacy_links {
     order: 2;
   }
@@ -552,14 +543,14 @@
     }
   }
 
+  .footer_menu {
+    gap: rem(100);
+  }
+
   .footer_nav {
     flex-direction: row;
     justify-content: space-between;
     gap: 0;
-  }
-
-  .footer_menu {
-    gap: rem(100);
   }
 
 }
